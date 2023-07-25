@@ -1,26 +1,55 @@
-// Test import of a JavaScript module
-import { example } from '@/js/example'
+import 'babel-polyfill';
+import Navigo from 'navigo';
 
-// Test import of an asset
-import webpackLogo from '@/images/webpack-logo.svg'
+import $ from "jquery"
+import { Space } from './js/pages/space'
+import { Releases } from './js/pages/releases'
 
-// Test import of styles
-import '@/styles/index.scss'
 
-// Appending to the DOM
-const logo = document.createElement('img')
-logo.src = webpackLogo
+const EventEmitter = require('events')
 
-const heading = document.createElement('h1')
-heading.textContent = example()
+global.eventEmitter = new EventEmitter()
 
-// Test a background image url in CSS
-const imageBackground = document.createElement('div')
-imageBackground.classList.add('image')
+window.page = null;
 
-// Test a public folder asset
-const imagePublic = document.createElement('img')
-imagePublic.src = '/assets/example.png'
+const router = new Navigo(null, false);
 
-const app = document.querySelector('#root')
-app.append(logo, heading, imageBackground, imagePublic)
+const gotoPage = Section => {
+  if (window.page) {
+    window.page.destroy()
+  }
+
+  window.page = new Section(router)
+}
+
+
+
+window.onload = () => {
+  router.on('/releases', function () {
+      gotoPage(Releases)
+      window.currentPage = 'Releases'
+    })
+  
+  router.on(function () {
+      gotoPage(Random)
+      window.currentPage = 'Space'
+    })  
+  
+  router.resolve()
+    
+
+  
+  
+}
+
+window.onresize = () => {
+  if (window.page.resize) {
+    window.page.resize()
+  }
+}
+
+$(".landing").on("click",() =>{
+  $(".landing").remove()
+  window.page.startInteraction()
+})
+

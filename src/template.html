@@ -6,9 +6,99 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
 
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <style>
+      html,
+      body {
+        overscroll-behavior-x: none;
+        margin: 0;
+        padding: 0;
+        color: white;
+        font-family: 'HK Grotesk Wide';
+        background: black;
+      }
+      video {
+        width: 100vw;
+        height: 100vh;
+      }
+
+      nav a {
+        color: white;
+
+        text-decoration: none;
+        z-index: 9999999;
+        font-weight: 400;
+      }
+
+      nav .item-1 {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+      }
+
+      nav .item-2 {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+      }
+
+      nav .item-3 {
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+      }
+
+      nav .item-4 {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+      }
+      .landing {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        text-align: center;
+        background: black;
+        background: radial-gradient(circle, rgba(0, 0, 0, 1) 52%, rgba(0, 0, 0, 0) 100%);
+      }
+
+      .landing-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+      }
+
+      .landing p {
+        text-transform: uppercase;
+        max-width: 400px;
+      }
+
+      video {
+        pointer-events: none;
+      }
+    </style>
+    <link rel="stylesheet" href="/font/stylesheet.css" />
   </head>
 
   <body>
+    <nav>
+      <a href="/" class="item-1">RELEASES</a>
+      <a href="/acerca" class="item-2">ACERCA</a>
+      <a href="/merch" class="item-3">MERCH</a>
+      <a href="/contacto" class="item-4">CONTACTO</a>
+    </nav>
+
     <div id="root"></div>
+
+    <div class="landing">
+      <div class="landing-wrapper">
+        <img src="/space/logo.jpeg" width="200" />
+        <p>colectivo tecno-biológico de músicas mutantes, arte sonoro y otras aventuras sónicas.</p>
+      </div>
+    </div>
   </body>
 </html>
