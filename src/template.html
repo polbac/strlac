@@ -13,20 +13,49 @@
         margin: 0;
         padding: 0;
         color: white;
-        font-family: 'HK Grotesk Wide';
+        font-family: 'Libre Baskerville';
         background: black;
+        transition: 1s background;
       }
       video {
         width: 100vw;
         height: 100vh;
       }
+      section {
+        min-height: 100vh;
+      }
+      body.white {
+        background: #ccc;
+        color: black;
+      }
+
+      body.white nav a {
+        color: black;
+      }
+
+      body.green {
+        background: #c3db1e;
+        color: black;
+      }
+
+      body.green nav a {
+        color: black;
+      }
 
       nav a {
-        color: white;
+        color: #c3db1e;
 
         text-decoration: none;
         z-index: 9999999;
         font-weight: 400;
+
+        font-family: 'Centrion';
+      }
+      nav .item-0 {
+        position: fixed;
+        top: 10px;
+        left: 50%;
+        transform: translate(-50%, 0);
       }
 
       nav .item-1 {
@@ -53,6 +82,7 @@
         right: 10px;
       }
       .landing {
+        display: none;
         position: fixed;
         top: 0;
         left: 0;
@@ -60,45 +90,340 @@
         height: 100%;
 
         text-align: center;
+
         background: black;
-        background: radial-gradient(circle, rgba(0, 0, 0, 1) 52%, rgba(0, 0, 0, 0) 100%);
       }
 
       .landing-wrapper {
         position: absolute;
         top: 50%;
         left: 50%;
+        width: 100%;
         transform: translate(-50%, -50%);
         cursor: pointer;
       }
 
-      .landing p {
+      .landing marquee {
         text-transform: uppercase;
-        max-width: 400px;
+        font-size: 2rem;
+        margin-top: 100px;
+        width: 100%;
+        font-family: 'Centrion';
       }
 
       video {
         pointer-events: none;
       }
+      #releases {
+        padding-top: 100px;
+      }
+
+      #releases .r {
+        display: flex;
+
+        justify-content: space-between;
+        border-bottom: 1px solid gray;
+        padding: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        transition: background 2s;
+        -webkit-transition: background 2s;
+        background: linear-gradient(360deg, rgba(103, 223, 161, 0) 0%, rgba(0, 0, 0, 0) 100%);
+      }
+
+      #releases .r:hover {
+        background: linear-gradient(360deg, #c3db1e 0%, rgba(0, 0, 0, 1) 45%);
+      }
+
+      #releases .r:hover img {
+        display: block;
+        height: 250%;
+        position: absolute;
+        left: 66%;
+        transform: translateY(-50%);
+        top: 50%;
+      }
+
+      #releases .r .artist {
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      #releases .r .work {
+        color: #c3db1e;
+        font-family: 'Centrion';
+        font-size: 2rem;
+        text-transform: uppercase;
+      }
+
+      #releases .r p {
+        padding: 0;
+        margin: 0;
+      }
+
+      #releases .cover {
+        position: absolute;
+        height: 20vh;
+        top: 0;
+        display: none;
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+
+      #about {
+        margin-top: 100px;
+        min-height: 100vh;
+      }
+      #about .container {
+        display: flex;
+        width: 80%;
+        margin: auto;
+      }
+      #about .people {
+        width: 33%;
+        padding: 20px;
+      }
+      #about .people .name {
+        text-transform: uppercase;
+        margin-top: 20px;
+        font-family: 'Centrion';
+        font-size: 2rem;
+        background: -webkit-linear-gradient(#eee, #333);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      #about .people .body {
+        filter: blur(10px);
+        transition: all 0.25s;
+      }
+      #about .people img {
+        width: 50%;
+        filter: grayscale(100) blur(10px);
+        transition: all 0.25s;
+      }
+
+      #about .people:hover img {
+        filter: grayscale(100) blur(0);
+      }
+
+      #about .people:hover .body {
+        color: #ccc;
+        filter: blur(0px);
+      }
+
+      #merch {
+        padding-top: 60px;
+        min-height: 100vh;
+      }
+      #merch .container {
+        display: flex;
+        width: 80%;
+        margin: auto;
+        flex-wrap: wrap;
+      }
+      #merch .product {
+        width: 33%;
+        position: relative;
+
+        text-align: center;
+        box-sizing: border-box;
+      }
+
+      #merch .product img {
+        width: auto;
+        height: 200px;
+      }
+
+      #merch .buy {
+        padding: 10px;
+        background: #c3db1e;
+        display: block;
+        color: black;
+        margin: auto;
+        margin-top: 20px;
+        width: 100px;
+        margin-bottom: 30px;
+        font-family: 'Centrion';
+        text-transform: uppercase;
+      }
+
+      #merch .buy:hover {
+        background: linear-gradient(360deg, #c3db1e 0%, rgba(0, 0, 0, 1) 45%);
+        color: white;
+      }
+
+      #merch .product .name,
+      #merch .product .price,
+      #merch .product .buy,
+      #merch .product img {
+        position: relative;
+      }
+
+      .landing-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: 50px;
+        margin-left: -250px;
+      }
+      .landing-lines {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -300px;
+        margin-left: 100px;
+      }
+      .strlc {
+        position: absolute;
+        top: -45%;
+        left: 50%;
+        margin-top: -15%;
+        margin-left: -30%;
+        width: 20%;
+      }
+      .bar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+      }
+
+      body.white .open-call {
+        color: black;
+        border: 1px solid black;
+      }
+
+      body.white .open-call:hover {
+        color: black;
+      }
+
+      .open-call {
+        position: fixed;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #c3db1e;
+        border: 1px solid #c3db1e;
+        border-radius: 50%;
+        width: 200px;
+        height: 75px;
+        line-height: 75px;
+        text-align: center;
+      }
+
+      .open-call:hover {
+        color: white;
+        text-decoration: underline;
+      }
+      #release .container {
+        text-align: center;
+        max-width: 1000px;
+        margin: auto;
+        padding-top: 200px;
+      }
+
+      #release .container .release-release {
+        font-family: 'Courier New', Courier, monospace;
+      }
+
+      #release .container .release-artist {
+      }
+
+      #release .container .release-work {
+        font-size: 3rem;
+        font-family: 'Centrion';
+        font-weight: bold;
+      }
+
+      #release .container .release-body {
+        line-height: 25px;
+      }
+
+      #release .container .release-iframe {
+        margin-top: 90px;
+      }
+
+      #release .release-gallery {
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+
+      #contact form {
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+
+      #contact .container {
+        max-width: 1000px;
+        margin: auto;
+        padding-top: 80px;
+        display: flex;
+      }
+
+      #contact .container .col {
+        width: 50%;
+      }
+
+      #contact .title {
+        font-weight: bold;
+        font-size: 2rem;
+        font-family: 'Centrion';
+      }
+
+      input[type='submit'] {
+        background: linear-gradient(360deg, #c3db1e 0%, rgba(0, 0, 0, 1) 45%);
+      }
     </style>
-    <link rel="stylesheet" href="/font/stylesheet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/font/centrion/Centrion-Regular.css" rel="stylesheet" />
+    <link href="/font/centrion/Centrion-High.css" rel="stylesheet" />
   </head>
 
   <body>
     <nav>
-      <a href="/" class="item-1">RELEASES</a>
-      <a href="/acerca" class="item-2">ACERCA</a>
+      <a href="/" class="item-0"><img width="50" src="/logo.png" /></a>
+      <a href="/releases" class="item-1">RELEASES</a>
+      <a href="/about" class="item-2">ACERCA</a>
       <a href="/merch" class="item-3">MERCH</a>
-      <a href="/contacto" class="item-4">CONTACTO</a>
+      <a href="/contact" class="item-4">CONTACTO</a>
     </nav>
 
     <div id="root"></div>
 
     <div class="landing">
       <div class="landing-wrapper">
-        <img src="/space/logo.jpeg" width="200" />
-        <p>colectivo tecno-biológico de músicas mutantes, arte sonoro y otras aventuras sónicas.</p>
+        <video
+          loop
+          src="/home/pink.mp4"
+          style="width: 300px !important; height: auto !important; opacity: 1 !important"
+          autoplay
+          muted
+          class="landing-video"
+        ></video>
+        <img src="/home/lines.png" width="350" class="landing-lines" />
+        <img src="/home/strlc.png" width="250" class="strlc" />
+
+        <img src="/home/bar.png" class="bar" />
+        <marquee
+          >colectivo tecno-biológico de músicas mutantes, arte sonoro y otras aventuras
+          sónicas.</marquee
+        >
       </div>
     </div>
+
+    <div id="section"></div>
+
+    <a class="open-call" href="https://tally.so/r/woe6N1" target="_blank">✹ OPEN CALL</a>
+
+    <script src="/app.bundle.js"></script>
   </body>
 </html>

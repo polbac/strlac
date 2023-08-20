@@ -2,20 +2,20 @@ import $ from 'jquery'
 
 
 export class Base {
-    constructor(router, pageSlug, type) {
-        this.type = type
+    constructor(router, pageSlug, data={}) {
         this.pageSlug = pageSlug
         
         $("#preloader").show()
         this.router = router
-        require(`../styles/${pageSlug}.css`);
-        const template = require(`../templates/${pageSlug}.hbs`);
+
+        const template = require(`../../templates/${pageSlug}.hbs`);
+
         
         
 
         document.querySelector("#root").style.display = "block"
 
-        $('#section').html(template())
+        $('#section').html(template({data}))
 
         this.bindLinks()
 
@@ -31,17 +31,14 @@ export class Base {
     bindLinks() {
         $('#section a').not("[target]").on('click', (event) => {
             event.preventDefault()
-            this.router.navigate($(event.target).attr("href"), true)
+            this.router.navigate($(event.currentTarget).attr("href"), true)
             return false
         })
     }
 
 
     reRender() {
-        const template = require(`../templates/${this.pageSlug}.hbs`);
-        const extracts = ExtractsManager.getExtracts()
-
-        $('#section').html(template({ extracts }))
+       
     }
     
 

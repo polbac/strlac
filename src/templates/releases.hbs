@@ -1,0 +1,19 @@
+<section id='releases'>
+
+  {{#each data}}
+    <a class='r' href='{{#if external}}{{external}}{{else}}/release/{{slug}}{{/if}}' {{#if external}}target="_blank"{{/if}}>
+      <div class='release'>{{this.release}}</div>
+      <div class='artist'>
+        <p class='work'>{{this.work}}</p>
+        <p class='name'>{{this.artits}}</p>
+
+      </div>
+      <div class='year'>
+        {{this.year}}
+      </div>
+      <img class='cover' src='{{this.cover}}' />
+
+    </a>
+  {{/each}}
+
+</section>

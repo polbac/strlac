@@ -3,29 +3,45 @@ import { arrayDivider } from '../utils/array'
 import { SpaceGroup } from '../components/space/group'
 import { UserControl, MOVE, MOUSE_MOVE, CLICK } from '../components/space/user-control'
 import {TweenMax} from 'gsap'
-import {Base} from './releases'
-
+import {Base} from './base'
+import SpaceData from '../data/space'
+import $ from "jquery"
 
 export class Space  extends Base{
 
     constructor(router) {
+        
+
         super(
             router,
             'space',
         )
+
         
     }
 
     show() {
+        TweenMax.set(".item-0", {opacity:0})
+        TweenMax.set(".landing", {display:"block"})
         
-       
 
-        window.landingShowed = true
+        $(".landing").on("click",() =>{
+            TweenMax.to(".landing", 1,{opacity:0,onComplete:() => {
+                TweenMax.set(".item-0", {opacity:1})
+                TweenMax.set(".landing", {display:"none"})
+                
+                  window.page.startInteraction()
+                
+            }})
+            
+            
+          })
+          
 
         this.active = true
         this.currentOver = null
         this.userControl = new UserControl()
-        const areas =  arrayDivider(this.data, 2)
+        const areas =  arrayDivider(SpaceData, 2)
         this.renderer = new THREE.WebGLRenderer();
         
         this.renderer.shadowMap.enabled = true;
@@ -71,7 +87,7 @@ export class Space  extends Base{
         
        
 
-        TweenMax.set("video", { opacity: 0 })
+        TweenMax.set(".canvas-video", { opacity: 0 })
         
         window.isInRandom = true
     }
