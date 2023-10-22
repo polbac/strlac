@@ -1,6 +1,11 @@
 export default [
     {
         type: 'image',
+        src: 'rayo.gif',
+        slug: 'image-1'
+    },
+    {
+        type: 'image',
         src: 'fktr.png',
         slug: 'image-1'
     },
@@ -16,28 +21,8 @@ export default [
     },
     {
         type: 'image',
-        src: 'c.jpeg',
-        slug: 'image-3'
-    },
-    {
-        type: 'image',
         src: 'polbac.jpeg',
         slug: 'image-4'
-    },
-    {
-        type: 'image',
-        src: 'logo.jpeg',
-        slug: 'image-5'
-    },
-    {
-        type: 'image',
-        src: 'logo.jpeg',
-        slug: 'image-1'
-    },
-    {
-        type: 'image',
-        src: 'logo.jpeg',
-        slug: 'image-2'
     },
     {
         type: 'image',
@@ -66,19 +51,15 @@ export default [
     },
     {
         type: 'video',
-        src: 'video1.mp4',
+        src: 'pink.mp4',
         slug: 'image-3'
     },
     {
-        type: 'image',
-        src: 'logo.jpeg',
-        slug: 'image-4'
+        type: 'video',
+        src: 'pink.mp4',
+        slug: 'image-3'
     },
-    {
-        type: 'image',
-        src: 'logo.jpeg',
-        slug: 'image-5'
-    },
+    
    
 ]
 

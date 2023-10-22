@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+
 import { arrayDivider } from '../utils/array'
 import { SpaceGroup } from '../components/space/group'
 import { UserControl, MOVE, MOUSE_MOVE, CLICK } from '../components/space/user-control'
@@ -21,22 +22,16 @@ export class Space  extends Base{
     }
 
     show() {
-        TweenMax.set(".item-0", {opacity:0})
-        TweenMax.set(".landing", {display:"block"})
-        
 
-        $(".landing").on("click",() =>{
-            TweenMax.to(".landing", 1,{opacity:0,onComplete:() => {
-                TweenMax.set(".item-0", {opacity:1})
-                TweenMax.set(".landing", {display:"none"})
-                
-                  window.page.startInteraction()
-                
-            }})
-            
-            
-          })
-          
+        const markText = $("#mark").text()
+
+        $("#mark").html(markText.split("").map(t => `<span>${t}</span>`))
+
+        $("#mark span").each(function(index){
+            TweenMax.set(this,{opacity:0})
+         
+         TweenMax.to(this,1,{opacity:1}).delay(index*0.1)
+        })
 
         this.active = true
         this.currentOver = null
@@ -54,7 +49,7 @@ export class Space  extends Base{
         this.camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 1, 2000 );
         this.scene = new THREE.Scene();
         
-        this.light = new THREE.DirectionalLight( 0xffffff, 0.5 );
+        this.light = new THREE.DirectionalLight( 0xc3db1e, 0.5 );
         this.light.position.z = 5
         
         this.light.castShadow = true
@@ -90,6 +85,8 @@ export class Space  extends Base{
         TweenMax.set(".canvas-video", { opacity: 0 })
         
         window.isInRandom = true
+
+        this.startInteraction()
     }
 
     startInteraction(){

@@ -17,7 +17,7 @@ export class VideoItem extends ItemBase{
 
     build() {
         const idDOMElement = uuidv4()
-        const videoPath = `space/${this.data.src}`
+        const videoPath = `home/${this.data.src}`
         $("body").append(`<video controls autoplay style='z-index: 0; position: absolute; top: 0; left: 0'  id='${idDOMElement}' src='${videoPath}' muted="muted" loop class="canvas-video"></video>`)
         
         this.video = document.getElementById(idDOMElement);

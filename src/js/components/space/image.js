@@ -13,7 +13,7 @@ export class ImageItem extends ItemBase{
     }
 
     build() {
-        const image = `space/${this.data.src}`
+        const image = `home/${this.data.src}`
         
         this.map = new THREE.TextureLoader().load(image);
         this.material = new THREE.SpriteMaterial( { map: this.map } );

@@ -23,15 +23,16 @@ export class UserControl {
     }
 
     wheel(e) {
+        console.log(window.isInRandom)
         if (!window.isInRandom) {
             return
         }
         
-        e.preventDefault()
+         e.preventDefault()
         const x = e.deltaX
         const y = e.deltaY
 
-        this.processVector(x, y)
+        
 
         return false
     }
@@ -70,6 +71,8 @@ export class UserControl {
         this.lastY = 0
         this.verticalDirection = null
         this.horizontalDirection = null
+            
+        
 
         document.addEventListener('mousemove', this.onDocumentMouseMove.bind(this), false);
         document.addEventListener('click', this.onClick.bind(this), false);
@@ -85,6 +88,7 @@ export class UserControl {
         this.touchStart = (e) => {
             touchstartX = e.touches[0].clientX;
             touchstartY = e.touches[0].clientY;
+            console.log("touchStart")
             e.preventDefault()
             return false
         }
@@ -94,7 +98,7 @@ export class UserControl {
         
 
         this.touchMove = (e) => {
-            
+            console.log("touchMove")
             touchendX = e.touches[0].clientX;
             touchendY = e.touches[0].clientY;
 
@@ -111,8 +115,8 @@ export class UserControl {
         }
 
         document.addEventListener('touchmove', this.touchMove, false); 
+        setTimeout(()=>this.processVector(-2 + Math.random()*4, -2 + Math.random()*4),2000)
         
-
     }
 
     mapMouseCoordinates({clientX, clientY})  {
@@ -132,6 +136,7 @@ export class UserControl {
     }
 
     onDocumentMouseMove(event) {
+        console.log("onDocumentMouseMove")
         event.preventDefault();
         const { x, y} = this.mapMouseCoordinates(event)
         global.eventEmitter.emit(MOUSE_MOVE, { 

@@ -24,7 +24,7 @@ export class Releases extends Base{
         TweenMax.to(this,{y:0},{speed:1,opacity:1}).delay(index*0.1)
         index++
        })
-       
+
     }
 
     destroy() {

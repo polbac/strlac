@@ -16,7 +16,12 @@ export class Contact extends Base{
 
     show() {
         $("body").addClass("green")
-        
+        $(".col").each(function(index) {
+            TweenMax.set(this,{y:100,opacity:0})
+            
+            TweenMax.to(this,1,{y:0,opacity:1}).delay(index*0.2)
+            index++
+           })
        
     }
 

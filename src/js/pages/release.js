@@ -18,8 +18,18 @@ export class Release extends Base{
 
 
     show() {
+        $(".zoom-gallery").click(()=>{
+            $(".zoom-gallery").css({display:"none"})
+        })
         TweenMax.from('#release',0.5,{y:10,opacity:0})
+        
+        $(".release-gallery img").click(function(){
+         const source = $(this).attr("src");
+         $(".zoom-gallery img").attr("src",source);
+         $(".zoom-gallery").css({display:"flex"})
 
+        })
+        
        
     }
 
