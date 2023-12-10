@@ -13,10 +13,11 @@ export class ImageItem extends ItemBase{
     }
 
     build() {
-        const image = `home/${this.data.src}`
+        const image = `${this.data.src}`
         
         this.map = new THREE.TextureLoader().load(image);
         this.material = new THREE.SpriteMaterial( { map: this.map } );
+        this.material.opacity = 0.25;
         this.sprite = new THREE.Sprite( this.material );
         this.image = new Image()
         this.image.onload = () => {
@@ -27,6 +28,8 @@ export class ImageItem extends ItemBase{
             }
         }
         this.image.src = image
+        this.image.opacity=0.5;
+        this.sprite.opacity = 0.5
         this.sprite._data = this.data
     }
 

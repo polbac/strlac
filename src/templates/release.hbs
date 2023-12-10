@@ -1,14 +1,16 @@
 <section id='release' style='background: {{data.background}};color:{{data.color}};'>
   <div class='container'>
-    <p class='release-release'>{{data.release}}</p>
-    <p class='release-artist'>{{data.artits}}</p>
+    <p class='release-release' style='color:white;'>{{data.release}}</p>
+
     <p class='release-work'>{{data.work}}</p>
+
+    <p class='release-artist'>{{data.artits}}</p>
 
     <div class='release-iframe'>
       {{{data.iframe}}}
     </div>
 
-    <div class='release-body'>
+    <div class='release-body' style='color: white;'>
       {{{data.body}}}
     </div>
 
@@ -23,11 +25,10 @@
   </div>
 
   <style>
-    .release-gallery img{cursor:pointer;} .release-work{ background: -webkit-linear-gradient({{data.color}},
-    #333); -webkit-background-clip: text; -webkit-text-fill-color: transparent; } .zoom-gallery{
-    align-items: center;justify-content: center; position:fixed; top:0; left:0; width:100%;
-    height:100%; z-index:999999999999999; display:none; background-image: radial-gradient(circle,
-    #686868, #4e4e4e, #353535, #1d1d1d, #000000);} .zoom-gallery img{ height: 90vh; }
+    .release-gallery img{cursor:pointer;} .zoom-gallery{ align-items: center;justify-content:
+    center; position:fixed; top:0; left:0; width:100%; height:100%; z-index:999999999999999;
+    display:none; background-image: radial-gradient(circle, #686868, #4e4e4e, #353535, #1d1d1d,
+    #000000);} .zoom-gallery img{ height: 90vh; }
   </style>
 
 </section>

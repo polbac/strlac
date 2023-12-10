@@ -1,71 +1,74 @@
 export default [
     {
         type: 'image',
-        src: 'rayo.gif',
-        slug: 'image-1'
+        src: 'logo.png',
+        slug: ''
     },
     {
         type: 'image',
-        src: 'fktr.png',
-        slug: 'image-1'
+        src: 'logo.png',
+        slug: ''
     },
     {
         type: 'image',
-        src: 'latigx.png',
-        slug: 'image-2'
+        src: 'logo.png',
+        slug: ''
     },
     {
         type: 'image',
-        src: 'ceci_castro.jpeg',
-        slug: 'image-3'
+        src: 'logo.png',
+        slug: ''
     },
     {
         type: 'image',
-        src: 'polbac.jpeg',
-        slug: 'image-4'
+        src: 'logo.png',
+        slug: ''
     },
     {
         type: 'image',
-        src: 'red.jpeg',
-        slug: 'image-3'
+        src: 'logo.png',
+        slug: ''
     },
     {
         type: 'image',
-        src: 'logo.jpeg',
-        slug: 'image-4'
+        src: 'logo.png',
+        slug: ''
     },
     {
         type: 'image',
-        src: 'red.jpeg',
-        slug: 'image-5'
+        src: 'logo.png',
+        slug: ''
     },
     {
         type: 'image',
-        src: 'fktr.png',
-        slug: 'image-1'
+        src: 'logo.png',
+        slug: ''
     },
     {
-        type: 'video',
-        src: 'video1.mp4',
-        slug: 'image-3'
+        type: 'image',
+        src: 'logo.png',
+        slug: ''
     },
     {
-        type: 'video',
-        src: 'pink.mp4',
-        slug: 'image-3'
+        type: 'image',
+        src: 'logo.png',
+        slug: ''
     },
     {
-        type: 'video',
-        src: 'pink.mp4',
-        slug: 'image-3'
+        type: 'image',
+        src: 'logo.png',
+        slug: ''
+    },
+    {
+        type: 'image',
+        src: 'logo.png',
+        slug: ''
+    },
+    {
+        type: 'image',
+        src: 'logo.png',
+        slug: ''
     },
     
    
 ]
-
-/* {
-    type: 'model',
-    obj: 'objects/turkiye_lego.gltf',
-    mtl: 'objects/obj1.mtl',
-    slug: 'object-1'
-}, */

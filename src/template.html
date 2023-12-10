@@ -34,7 +34,7 @@
       }
 
       body.green {
-        background: #c3db1e;
+        background: #ff8f00;
         color: black;
       }
 
@@ -43,13 +43,14 @@
       }
 
       nav a {
-        color: #c3db1e;
+        color: #ff8f00;
 
         text-decoration: none;
         z-index: 9999999;
         font-weight: 400;
 
-        font-family: 'Centrion';
+        font-family: 'Oswald';
+        letter-spacing: 4px;
       }
       nav .item-0 {
         position: fixed;
@@ -108,7 +109,7 @@
         font-size: 2rem;
         margin-top: 100px;
         width: 100%;
-        font-family: 'Centrion';
+        font-family: 'Oswald';
       }
 
       video {
@@ -117,7 +118,12 @@
       #releases {
         padding-top: 100px;
       }
-
+      #releases .r > div {
+        width: 33%;
+      }
+      #releases .r .year {
+        text-align: right;
+      }
       #releases .r {
         display: flex;
 
@@ -132,7 +138,7 @@
       }
 
       #releases .r:hover {
-        background: linear-gradient(360deg, #c3db1e 0%, rgba(0, 0, 0, 1) 45%);
+        background: linear-gradient(360deg, #ff8f00 0%, rgba(0, 0, 0, 1) 45%);
       }
 
       #releases .r:hover img {
@@ -150,10 +156,11 @@
       }
 
       #releases .r .work {
-        color: #c3db1e;
-        font-family: 'Centrion';
+        color: #ff8f00;
+        font-family: 'Oswald';
         font-size: 2rem;
         text-transform: uppercase;
+        letter-spacing: 4px;
       }
 
       #releases .r p {
@@ -181,38 +188,39 @@
         display: flex;
         width: 80%;
         margin: auto;
+        flex-wrap: wrap;
       }
       #about .people {
-        width: 33%;
+        width: 49%;
         padding: 20px;
       }
       #about .people .name {
         text-transform: uppercase;
         margin-top: 20px;
-        font-family: 'Centrion';
+        font-family: 'Oswald';
         font-size: 2rem;
-        background: -webkit-linear-gradient(#eee, #333);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: #ff8f00;
+        letter-spacing: 4px;
       }
 
-      #about .people .body {
+      #about .people.juan-ramundo .body {
         filter: blur(10px);
         transition: all 0.25s;
       }
-      #about .people img {
+      #about .people.juan-ramundo img {
         width: 50%;
         filter: grayscale(100) blur(10px);
         transition: all 0.25s;
       }
 
-      #about .people:hover img {
-        filter: grayscale(100) blur(0);
+      #about .people img {
+        width: 50%;
+
+        transition: all 0.25s;
       }
 
-      #about .people:hover .body {
-        color: #ccc;
-        filter: blur(0px);
+      .juan-ramundo .name {
+        filter: grayscale(100) blur(10px);
       }
 
       #merch {
@@ -240,19 +248,20 @@
 
       #merch .buy {
         padding: 10px;
-        background: #c3db1e;
+        background: #ff8f00;
         display: block;
         color: black;
         margin: auto;
         margin-top: 20px;
         width: 100px;
         margin-bottom: 30px;
-        font-family: 'Centrion';
+        font-family: 'Oswald';
         text-transform: uppercase;
+        letter-spacing: 4px;
       }
 
       #merch .buy:hover {
-        background: linear-gradient(360deg, #c3db1e 0%, rgba(0, 0, 0, 1) 45%);
+        background: linear-gradient(360deg, #ff8f00 0%, rgba(0, 0, 0, 1) 45%);
         color: white;
       }
 
@@ -294,11 +303,9 @@
 
       body.white .open-call {
         color: black;
-        border: 1px solid black;
       }
 
       body.white .open-call:hover {
-        color: black;
       }
 
       .open-call {
@@ -306,12 +313,7 @@
         bottom: 10px;
         left: 50%;
         transform: translateX(-50%);
-        color: #c3db1e;
-        border: 1px solid #c3db1e;
-        border-radius: 50%;
-        width: 200px;
-        height: 75px;
-        line-height: 75px;
+
         text-align: center;
       }
 
@@ -328,15 +330,20 @@
 
       #release .container .release-release {
         font-family: 'Courier New', Courier, monospace;
+        margin: 0;
       }
 
       #release .container .release-artist {
+        margin: 0;
+        margin-bottom: 2rem;
       }
 
       #release .container .release-work {
         font-size: 3rem;
-        font-family: 'Centrion';
+        font-family: 'Oswald';
         font-weight: bold;
+        letter-spacing: 4px;
+        margin: 0;
       }
 
       #release .container .release-body {
@@ -371,11 +378,12 @@
       #contact .title {
         font-weight: bold;
         font-size: 2rem;
-        font-family: 'Centrion';
+        font-family: 'Oswald';
+        letter-spacing: 4px;
       }
 
       input[type='submit'] {
-        background: linear-gradient(360deg, #c3db1e 0%, rgba(0, 0, 0, 1) 45%);
+        background: linear-gradient(360deg, #ff8f00 0%, rgba(0, 0, 0, 1) 45%);
       }
 
       #contact .container {
@@ -384,8 +392,7 @@
       }
 
       #contact .container a {
-        color: #c3db1e;
-
+        color: black;
         text-shadow: 0px 0px 10px black;
       }
 
@@ -417,15 +424,21 @@
       }
 
       #contact form #mc-embedded-subscribe {
-        color: white;
-        font-family: 'Centrion';
+        font-family: 'Oswald';
         font-size: 20px;
+        letter-spacing: 4px;
+        height: 51px;
+        border-radius: 0;
+        background: white;
+        color: black;
       }
+
       #contact .text {
         color: black;
         text-transform: uppercase;
         max-width: 250px;
-        text-shadow: 0px 0px 6px #c3db1e;
+        text-shadow: 0px 0px 6px #ff8f00;
+        color: white;
       }
 
       @media (max-width: 640px) {
@@ -450,6 +463,11 @@
       * {
         box-sizing: border-box;
       }
+
+      .home-color .item-3,
+      .home-color .item-4 {
+        color: black;
+      }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -457,25 +475,34 @@
       href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap"
       rel="stylesheet"
     />
-    <link href="/font/centrion/Centrion-Regular.css" rel="stylesheet" />
-    <link href="/font/centrion/Centrion-High.css" rel="stylesheet" />
+    <link href="<%= root_path %>font/centrion/Centrion-Regular.css" rel="stylesheet" />
+    <link href="<%= root_path %>font/centrion/Centrion-High.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Oswald:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <nav>
-      <a href="/" class="item-0"><img width="50" src="/logo.png" /></a>
-      <a href="/releases" class="item-1">RELEASES</a>
-      <a href="/about" class="item-2">ACERCA</a>
-      <a href="/merch" class="item-3">MERCH</a>
-      <a href="/contact" class="item-4">CONTACTO</a>
+      <a href="<%= root_path %>" class="item-0"
+        ><img width="50" src="<%= root_path %>logo.png"
+      /></a>
+      <a href="<%= root_path %>releases" class="item-1">RELEASES</a>
+      <a href="<%= root_path %>about" class="item-2">ACERCA</a>
+      <a href="<%= root_path %>merch" class="item-3">MERCH</a>
+      <a href="<%= root_path %>contact" class="item-4">CONTACTO</a>
     </nav>
 
     <div id="root"></div>
 
     <div id="section"></div>
 
-    <a class="open-call" href="https://tally.so/r/woe6N1" target="_blank">✹ OPEN CALL</a>
-
-    <script src="/app.bundle.js"></script>
+    <script>
+      const PRE_PATH = '<%= root_path %>'
+    </script>
+    <script src="<%= root_path %>app.bundle.js?<%= timestamp %>"></script>
   </body>
 </html>

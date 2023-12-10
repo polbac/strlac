@@ -11,7 +11,7 @@ module.exports = merge(common, {
   output: {
     path: paths.build,
     publicPath: '/',
-    filename: 'js/[name].[contenthash].bundle.js',
+    filename: '[name].bundle.js',
   },
   module: {
     rules: [
@@ -43,9 +43,7 @@ module.exports = merge(common, {
   optimization: {
     minimize: true,
     minimizer: [new CssMinimizerPlugin(), '...'],
-    runtimeChunk: {
-      name: 'runtime',
-    },
+   
   },
   performance: {
     hints: false,

@@ -115,7 +115,7 @@ export class UserControl {
         }
 
         document.addEventListener('touchmove', this.touchMove, false); 
-        setTimeout(()=>this.processVector(-2 + Math.random()*4, -2 + Math.random()*4),2000)
+        setTimeout(()=>this.processVector(-2 + Math.random()*4, -2 + Math.random()*4),0)
         
     }
 

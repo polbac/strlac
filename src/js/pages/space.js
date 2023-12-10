@@ -1,12 +1,13 @@
 import * as THREE from 'three';
+/* import {FirstPersonControls} from 'three-addons' */
 
-import { arrayDivider } from '../utils/array'
-import { SpaceGroup } from '../components/space/group'
-import { UserControl, MOVE, MOUSE_MOVE, CLICK } from '../components/space/user-control'
 import {TweenMax} from 'gsap'
 import {Base} from './base'
-import SpaceData from '../data/space'
+
 import $ from "jquery"
+
+
+
 
 export class Space  extends Base{
 
@@ -23,6 +24,7 @@ export class Space  extends Base{
 
     show() {
 
+        $("body").addClass("home-color")
         const markText = $("#mark").text()
 
         $("#mark").html(markText.split("").map(t => `<span>${t}</span>`))
@@ -34,143 +36,112 @@ export class Space  extends Base{
         })
 
         this.active = true
-        this.currentOver = null
-        this.userControl = new UserControl()
-        const areas =  arrayDivider(SpaceData, 2)
-        this.renderer = new THREE.WebGLRenderer();
-        
-        this.renderer.shadowMap.enabled = true;
-        this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-        this.renderer.setClearColor(0x000000, 1);
-        
-        this.renderer.localClippingEnabled = true;
-        
-        this.renderer.setSize( window.innerWidth, window.innerHeight );
-        this.camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 1, 2000 );
-        this.scene = new THREE.Scene();
-        
-        this.light = new THREE.DirectionalLight( 0xc3db1e, 0.5 );
-        this.light.position.z = 5
-        
-        this.light.castShadow = true
-        this.scene.add(this.light) 
-        
-
-        this.raycaster = new THREE.Raycaster()
-        this.mouse = new THREE.Vector2();
-        this.counter = 0
-
-        /* this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
-	    this.renderer.toneMappingExposure = 1; */
-        
-        const pmremGenerator = new THREE.PMREMGenerator( this.renderer );
-		pmremGenerator.compileEquirectangularShader();
-
-        this.renderer.setPixelRatio( window.devicePixelRatio );
-
-        document.body.appendChild( this.renderer.domElement );
-        
-
-        this.groups = [
-            new SpaceGroup(areas[0], this.scene, 0, this.renderer),
-            new SpaceGroup(areas[1], this.scene, 1, this.renderer),
-        ]
-        
-        this.groups[0].build()
-        this.groups[1].build()
-        this.animate.bind(this)()
-        
        
 
         TweenMax.set(".canvas-video", { opacity: 0 })
         
         window.isInRandom = true
+        
+        const worldWidth = 128, worldDepth = 128;
+        
+        
+        this.camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 1, 20000 );
+        this.camera.position.y = 200;
 
-        this.startInteraction()
-    }
+				this.clock = new THREE.Clock();
 
-    startInteraction(){
-        global.eventEmitter.on(
-            MOVE,
-            this.move.bind(this)
-        )
+				this.scene = new THREE.Scene();
+				this.scene.background = new THREE.Color( 0x000000 );
+				this.scene.fog = new THREE.FogExp2( 0x000000, 0.0007 );
 
-        global.eventEmitter.on(
-            MOUSE_MOVE,
-            this.mouseMove.bind(this)
-        )
+				this.geometry = new THREE.PlaneGeometry( 20000, 20000, worldWidth - 1, worldDepth - 1 );
+				this.geometry.rotateX( - Math.PI / 2 );
 
-        global.eventEmitter.on(
-            CLICK,
-            this.click.bind(this)
-        )
-    }
+				const position = this.geometry.attributes.position;
+				position.usage = THREE.DynamicDrawUsage;
 
-    reRandom() {
-        this.groups[0].reRandom()
-        this.groups[1].reRandom()
-    }
+				for ( let i = 0; i < position.count; i ++ ) {
 
-    move(coor) {
-        this.coor = coor
-    }
+					const y = 35 * Math.sin( i / 2 );
+					position.setY( i, y );
 
-    mouseMove(coor) {
-        this.mouse.x = ( coor.x / window.innerWidth ) * 2 - 1;
-	    this.mouse.y = - ( coor.y / window.innerHeight ) * 2 + 1;
-    }
+				}
 
-    click() {
-        if(this.currentOver && this.active) {
-            const { type, slug } = this.currentOver.object._data
-            this.router.navigate(`${type}/${slug}`)
-        }
+				const texture = new THREE.TextureLoader().load( 'water.jpeg' );
+				texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+				texture.repeat.set( 5, 5 );
+				texture.colorSpace = THREE.SRGBColorSpace;
+
+				this.material = new THREE.MeshBasicMaterial( { color: 0xff8f00, map: texture } );
+
+				this.mesh = new THREE.Mesh( this.geometry, this.material );
+				this.scene.add( this.mesh );
+
+				this.renderer = new THREE.WebGLRenderer( { antialias: true } );
+				this.renderer.setPixelRatio( window.devicePixelRatio );
+				this.renderer.setSize( window.innerWidth, window.innerHeight );
+				document.body.appendChild( this.renderer.domElement );
+
+				/* this.controls = new FirstPersonControls( this.camera, this.renderer.domElement );
+
+				this.controls.movementSpeed = 500;
+				this.controls.lookSpeed = 0.1; */
+
+				
+
+				//
+
+                this.animate()
+
+				
     }
 
     
-    animate() {
-        if (this.groups){
-            this.groups.forEach(group => {
-                if (this.coor) group.move(this.coor)
-                group.render()
-            })
-        }
-        
-        this.camera.updateProjectionMatrix();
-        this.idAnimationFrame = requestAnimationFrame(this.animate.bind(this));
-        this.renderer.render(this.scene, this.camera);
-
-        this.raycaster.setFromCamera(this.mouse, this.camera);
-
-        if (this.groups) {
-            const items = []
-            this.groups.forEach(group => {
-                group.items.forEach(item => {
-                    items.push(item.getItemDetectMouse())
-                })
-                
-            })
-
-            const intersects = this.raycaster.intersectObjects(items);
-
-            if (!!intersects.length && !window.showingLanding) {
-                //document.querySelector('body').style.cursor = 'pointer'
-                this.currentOver = intersects[0]
-            } else {
-                //document.querySelector('body').style.cursor = 'initial'
-                this.currentOver = null
-            }
-        }
-
-        
-        
-    }
+   
 
     resize() {
         this.camera.aspect = window.innerWidth / window.innerHeight;
-		this.camera.updateProjectionMatrix();
-        this.renderer.setSize(window.innerWidth, window.innerHeight);
+        this.camera.updateProjectionMatrix();
+
+        this.renderer.setSize( window.innerWidth, window.innerHeight );
+
+       // this.controls.handleResize();
     }
+
+     animate() {
+
+        requestAnimationFrame( this.animate.bind(this) );
+
+        this.render();
+        
+
+    }
+
+    render() {
+
+        const delta = this.clock.getDelta();
+        const time = this.clock.getElapsedTime() * 10;
+
+        const position = this.geometry.attributes.position;
+
+        for ( let i = 0; i < position.count; i ++ ) {
+
+            const y = 35 * Math.sin( i / 5 + ( time + i ) / 7 );
+            position.setY( i, y );
+
+        }
+
+        position.needsUpdate = true;
+
+        
+        this.renderer.render( this.scene, this.camera );
+
+    }
+
+    destroy() {
+        $("body").removeClass("home-color")
+    }
+
 
 
 }

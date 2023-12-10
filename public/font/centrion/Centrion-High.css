@@ -1,9 +1,9 @@
-/* Webfont: Centrion-High */@font-face {
-    font-family: 'Centrion';
-    src: url('Centrion-High.woff2') format('woff2'), /* Modern Browsers */
-         url('Centrion-High.otf') format('opentype'); /* Safari, Android, iOS */
-             font-style: normal;
-    font-weight: normal;
-    text-rendering: optimizeLegibility;
+/* Webfont: Centrion-High */
+@font-face {
+  font-family: 'Oswald';
+  src: url('Centrion-High.woff2') format('woff2'),
+    /* Modern Browsers */ url('Centrion-High.otf') format('opentype'); /* Safari, Android, iOS */
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
 }
-
