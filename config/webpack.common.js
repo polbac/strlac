@@ -45,7 +45,7 @@ const path = require('path');
        inject: false,
        templateParameters: {
         'bundle_path': '../dist',
-        root_path: process.env.NODE_ENV === 'production' ? '/new/': '/',
+        root_path: process.env.NODE_ENV === 'production' ? '/': '/',
         timestamp:  new Date().getTime() 
       },
      }),
