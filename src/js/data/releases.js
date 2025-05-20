@@ -16,10 +16,12 @@ export default [
         <p>03-Extracción de estilo</p>
 <p>04-Algo rítmico</p>
 <p>05-Repetibilidad de las señales </p>
+
+<p style="margin-top:2rem;">1/60</p>
 </div>
     `,
     iframe: `
-    <iframe width="100%" height="310" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1087965925&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/sterlac-records" title="strlac records" target="_blank" style="color: #cccccc; text-decoration: none;" rel="noopener noreferrer">strlac records</a> · <a href="https://soundcloud.com/sterlac-records/sets/fkt-lamuertenatural" title="FKT - LAMUERTENATURAL" target="_blank" style="color: #cccccc; text-decoration: none;" rel="noopener noreferrer">FKT &#8211; LAMUERTENATURAL</a></div>
+    <!--iframe width="100%" height="310" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1087965925&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/sterlac-records" title="strlac records" target="_blank" style="color: #cccccc; text-decoration: none;" rel="noopener noreferrer">strlac records</a> · <a href="https://soundcloud.com/sterlac-records/sets/fkt-lamuertenatural" title="FKT - LAMUERTENATURAL" target="_blank" style="color: #cccccc; text-decoration: none;" rel="noopener noreferrer">FKT &#8211; LAMUERTENATURAL</a></div-->
     `,
     gallery: [{ width: '50%', src: '/releases_images/trifasica/cover.jpeg' }],
   },
