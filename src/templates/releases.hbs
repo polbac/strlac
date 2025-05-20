@@ -1,7 +1,7 @@
 <section id='releases'>
 
   {{#each data}}
-    <a class='r' href='{{#if external}}{{external}}{{else}}/release/{{slug}}{{/if}}' {{#if external}}target="_blank"{{/if}}>
+    <a  class='r {{this.slug}}' href='{{#if external}}{{external}}{{else}}/release/{{slug}}{{/if}}' {{#if external}}target="_blank"{{/if}}>
       <div class='release'>{{this.release}}</div>
       <div class='artist'>
         <p class='work'>{{this.work}}</p>

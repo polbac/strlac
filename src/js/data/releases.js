@@ -1,10 +1,35 @@
-export default [{
-    release:"[STRLAC005]",
-    artits:"Ceci Castro",
-    work:"INTERMONTE",
-    cover:"intermonte.jpeg",
+export default [
+  {
+    release: '[STRLC007]',
+    artits: 'Javier Areal Velez',
+    work: 'TRIFASICA',
+    cover: 'trifasica.jpeg',
+    year: 2025,
+    slug: 'trifasica',
+    hide: true,
+    color: '#e3d4d4',
+    background: '#0e0e3a',
+    body: `
+    <div style="text-align:left;">
+       <p>01-Patrón </p>
+       <p>02-Almacenamiento y anticipación</p>
+        <p>03-Extracción de estilo</p>
+<p>04-Algo rítmico</p>
+<p>05-Repetibilidad de las señales </p>
+</div>
+    `,
+    iframe: `
+    <iframe width="100%" height="310" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1087965925&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/sterlac-records" title="strlac records" target="_blank" style="color: #cccccc; text-decoration: none;" rel="noopener noreferrer">strlac records</a> · <a href="https://soundcloud.com/sterlac-records/sets/fkt-lamuertenatural" title="FKT - LAMUERTENATURAL" target="_blank" style="color: #cccccc; text-decoration: none;" rel="noopener noreferrer">FKT &#8211; LAMUERTENATURAL</a></div>
+    `,
+    gallery: [{ width: '50%', src: '/releases_images/trifasica/cover.jpeg' }],
+  },
+  {
+    release: '[STRLAC005]',
+    artits: 'Ceci Castro',
+    work: 'INTERMONTE',
+    cover: 'intermonte.jpeg',
     year: 2022,
-    slug:"intermonte",
+    slug: 'intermonte',
     body: `
     Laryssa KIM: voz y sintes en Surlandia<br/>
     Agustin Genoud: destellos de voz en Lamento de la Ninfa<br/>
@@ -22,20 +47,20 @@ export default [{
     color: '#23afdd',
     background: 'black',
     gallery: [
-        {width:"50%",src:'/releases_images/intermonte/1.jpeg'},
-        {width:"50%",src:'/releases_images/intermonte/2.jpeg'},
-        {width:"100%",src:'/releases_images/intermonte/3.jpeg'},
+      { width: '50%', src: '/releases_images/intermonte/1.jpeg' },
+      { width: '50%', src: '/releases_images/intermonte/2.jpeg' },
+      { width: '100%', src: '/releases_images/intermonte/3.jpeg' },
     ],
-},
-{
-    release:"[STRLAC004]",
-    artits:"LATIGX ",
-    work:"SOY EL INDIO / SOY LA CRUZ",
-    cover:"latigx.png",
+  },
+  {
+    release: '[STRLAC004]',
+    artits: 'LATIGX ',
+    work: 'SOY EL INDIO / SOY LA CRUZ',
+    cover: 'latigx.png',
     year: 2021,
-    slug:"soy-el-indio-soy-la-voz",
-    iframe:`<iframe id="_ytid_33079" width="100%" height="641" data-origwidth="1140" data-origheight="641" data-relstop="1" src="https://www.youtube.com/embed/Ok-8MtQdsBA?enablejsapi=1&#038;autoplay=1&#038;cc_load_policy=0&#038;cc_lang_pref=&#038;iv_load_policy=1&#038;loop=0&#038;modestbranding=1&#038;rel=0&#038;fs=1&#038;playsinline=1&#038;autohide=2&#038;theme=dark&#038;color=red&#038;controls=1&#038;" class="__youtube_prefs__  no-lazyload" title="YouTube player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-no-lazy="1" data-skipgform_ajax_framebjll></iframe>`,
-    color:'#893939',
+    slug: 'soy-el-indio-soy-la-voz',
+    iframe: `<iframe id="_ytid_33079" width="100%" height="641" data-origwidth="1140" data-origheight="641" data-relstop="1" src="https://www.youtube.com/embed/Ok-8MtQdsBA?enablejsapi=1&#038;autoplay=1&#038;cc_load_policy=0&#038;cc_lang_pref=&#038;iv_load_policy=1&#038;loop=0&#038;modestbranding=1&#038;rel=0&#038;fs=1&#038;playsinline=1&#038;autohide=2&#038;theme=dark&#038;color=red&#038;controls=1&#038;" class="__youtube_prefs__  no-lazyload" title="YouTube player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-no-lazy="1" data-skipgform_ajax_framebjll></iframe>`,
+    color: '#893939',
     background: 'black',
     body: `
     <strong>Un milagro emotropical</strong>
@@ -45,45 +70,45 @@ export default [{
     <p>Agustina Wetzel</p>
     `,
     gallery: [
-        {width:"50%",src:'/releases_images/latigx/1.png'},
-        {width:"50%",src:'/releases_images/latigx/2.png'},
+      { width: '50%', src: '/releases_images/latigx/1.png' },
+      { width: '50%', src: '/releases_images/latigx/2.png' },
     ],
-},
-{
-    release:"[STRLAC003]",
-    artits:"POLBAC",
-    work:"INFRAMUNDO",
-    cover:"polbac.jpeg",
+  },
+  {
+    release: '[STRLAC003]',
+    artits: 'POLBAC',
+    work: 'INFRAMUNDO',
+    cover: 'polbac.jpeg',
     year: 2021,
-    external: "https://inframundo.strlac.xyz/"
-},
-{
-    release:"[STRLAC002]",
-    artits:"NIXØN ",
-    work:"EL ASNO DE ORO",
-    cover:"nixon.jpeg",
+    external: 'https://inframundo.strlac.xyz/',
+  },
+  {
+    release: '[STRLAC002]',
+    artits: 'NIXØN ',
+    work: 'EL ASNO DE ORO',
+    cover: 'nixon.jpeg',
     year: 2020,
-    slug:"el-asno-de-oro",
+    slug: 'el-asno-de-oro',
     color: '#f8efc2',
     background: 'black',
     body: `
     <p>El Asno de Oro es el resultado de dos improvisaciones realizadas en la apacible soledad de un recóndito pueblo rural en Cataluña. Sus dos tracks fueron grabados en vivo y nunca más editados. Aprendo más de los errores que de los aciertos.</p>
     `,
     gallery: [
-        {width:"50%",src:'/releases_images/nixon/1.jpeg'},
-        {width:"50%",src:'/releases_images/nixon/2.jpeg'},
+      { width: '50%', src: '/releases_images/nixon/1.jpeg' },
+      { width: '50%', src: '/releases_images/nixon/2.jpeg' },
     ],
     iframe: `
     <iframe width="100%" height="500" src="https://www.youtube.com/embed/T_u_-jfGSD4?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    `
-},
-{
-    release:"[STRLAC001]",
-    artits:"FKT",
-    work:"LA MUERTE NATURAL ",
-    cover:"fktr.png",
+    `,
+  },
+  {
+    release: '[STRLAC001]',
+    artits: 'FKT',
+    work: 'LA MUERTE NATURAL ',
+    cover: 'fktr.png',
     year: 2020,
-    slug:"la-muerte-natural",
+    slug: 'la-muerte-natural',
     color: '#5f5f5f',
     background: 'black',
     body: `
@@ -92,11 +117,12 @@ export default [{
         <p>Elija usted en cuál de todas ellas e puso a pensar.</p>
         <p>Cuántas veces tendré que morir para ser siempre yo?</p>
     `,
-    iframe:`
+    iframe: `
     <iframe width="100%" height="310" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1087965925&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/sterlac-records" title="strlac records" target="_blank" style="color: #cccccc; text-decoration: none;" rel="noopener noreferrer">strlac records</a> · <a href="https://soundcloud.com/sterlac-records/sets/fkt-lamuertenatural" title="FKT - LAMUERTENATURAL" target="_blank" style="color: #cccccc; text-decoration: none;" rel="noopener noreferrer">FKT &#8211; LAMUERTENATURAL</a></div>
     `,
     gallery: [
-        {width:"50%",src:'/releases_images/fktr/1.png'},
-        {width:"50%",src:'/releases_images/fktr/2.png'},
-    ]
-}]
+      { width: '50%', src: '/releases_images/fktr/1.png' },
+      { width: '50%', src: '/releases_images/fktr/2.png' },
+    ],
+  },
+]
