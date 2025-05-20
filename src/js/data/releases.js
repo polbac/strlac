@@ -1,8 +1,8 @@
 export default [
   {
     release: '[STRLC007]',
-    artits: 'Javier Areal Velez',
-    work: 'TRIFASICA',
+    artits: 'Javier Areal Vélez',
+    work: 'TRIFÁSICA',
     cover: 'trifasica.jpeg',
     year: 2025,
     slug: 'trifasica',
