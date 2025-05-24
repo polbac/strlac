@@ -7,23 +7,50 @@ export default [
     year: 2025,
     slug: 'trifasica',
     hide: true,
-    color: '#e3d4d4',
-    background: '#0e0e3a',
+    color: '#4d4d4d',
+    textColor: '#4d4d4d',
+    background: '#ebebeb',
     body: `
-    <div style="text-align:left;">
-       <p>01-Patrón </p>
-       <p>02-Almacenamiento y anticipación</p>
-        <p>03-Extracción de estilo</p>
-<p>04-Algo rítmico</p>
-<p>05-Repetibilidad de las señales </p>
+    <div style="text-align:left;color:#4d4d4d">
+    <p>Luego de una larga trayectoria como guitarrista experimental, Javier Areal Vélez presenta <b>Trifásica</b>, <i>primer lanzamiento discográfico de su nuevo proyecto de música electrónica generativa</i>. </p>
+<p>Se trata de un set de electrónica en vivo que cuestiona los límites del loop, superponiendo <i>ritmos evolutivos independientes</i> que transponen lógicas de polirritmias latinoamericanas a paisajes <i>post-digitales</i> de <i>samples ruidosos</i>, <i>sintetizadores rotos</i> y <i>efectos abrasivos</i>.</p>
+<p>En sus conciertos, Javier opera una laptop con un <i>software pseudo-inteligente</i> que programó en <i>Max/MSP</i> y <i>Ableton Live</i>. Como un secuenciador con agencia propia, este <i>robot autónomo moldea cada sonido</i>, eligiendo samples, configurando sintetizadores, definiendo alturas, duraciones y efectos. La música surge de una tensa negociación continua entre la máquina y el humano que intenta controlarla. </p>
+<p>Luego de tocar esta propuesta en festivales como <I>Tsonami</i> (Chile), <I>EXIT</I> (Uruguay), <I>Primavera NOISE</I> (Argentina) y en varias giras por Europa, Javier registró Trifásica en vivo en el Centro de Arte Sonoro (Buenos Aires), antes de su cierre.</p>
+<p>El <i>EP contiene cinco tracks</i> diferenciados que recorren <i>polirritmias secas y glitcheras</i>, donde coexisten <i>beats cerebrales, texturas noise y elementos inesperadamente bailables</i>.
+</p>
 
-<p style="margin-top:2rem;">1/60</p>
+<p style="margin-top:2rem;"><u>Ficha técnica</u></p>
+<p >
+<i>Interpretado en vivo</i> por Javier Areal Vélez + un patch de Max4Live<br/>
+<i>Batería acústica sampleada</i> de Pablo Verón<br/>
+<i>Guitarra preparada, samples y mezcla</i> Javier Areal Vélez<br/>
+<i>Mastering</i> Nix<br/>
+<i>Arte de tapa</i> Javier Areal Vélez + Nicolás Bacal + Faktor
+
+</p>
+<div style="line-height:10px;margin-top:2rem;">       
+
+<p><u>Tracklist</u></p>
+<p style="line-height:10px;margin-top:2rem;">01/Patrón </p>
+       <p>02/Almacenamiento y anticipación</p>
+        <p>03/Extracción de estilo</p>
+<p>04/Algo rítmico</p>
+<p>05/Repetibilidad de las señales </p>
+</div>
+<p style="margin-top:2rem;font-size:1.5rem"><i>1/60</i></p>
 </div>
     `,
     iframe: `
     <!--iframe width="100%" height="310" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1087965925&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/sterlac-records" title="strlac records" target="_blank" style="color: #cccccc; text-decoration: none;" rel="noopener noreferrer">strlac records</a> · <a href="https://soundcloud.com/sterlac-records/sets/fkt-lamuertenatural" title="FKT - LAMUERTENATURAL" target="_blank" style="color: #cccccc; text-decoration: none;" rel="noopener noreferrer">FKT &#8211; LAMUERTENATURAL</a></div-->
     `,
-    gallery: [{ width: '50%', src: '/releases_images/trifasica/cover.jpeg' }],
+    gallery: [
+      { width: '50%', src: '/releases_images/trifasica/2.jpg' },
+      { width: '50%', src: '/releases_images/trifasica/5.jpg' },
+      { width: '100%', src: '/releases_images/trifasica/1.png' },
+
+      { width: '100%', src: '/releases_images/trifasica/4.png' },
+      { width: '100%', src: '/releases_images/trifasica/6.JPG' },
+    ],
   },
   {
     release: '[STRLAC005]',
