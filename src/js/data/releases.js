@@ -1,12 +1,12 @@
 export default [
   {
+    featuring:true,
     release: '[STRLC007]',
     artits: 'Javier Areal Vélez',
     work: 'TRIFÁSICA',
     cover: 'trifasica.jpeg',
     year: 2025,
     slug: 'trifasica',
-    hide: true,
     color: '#4d4d4d',
     textColor: '#4d4d4d',
     background: '#ebebeb',
@@ -37,20 +37,47 @@ export default [
 <p>04/Algo rítmico</p>
 <p>05/Repetibilidad de las señales </p>
 </div>
-<p style="margin-top:2rem;font-size:1.5rem"><i>1/60</i></p>
+
+
+<div style="line-height:10px;margin-top:2rem;">       
+
+<p><u>Links</u></p>
+<p style="line-height:10px;margin-top:2rem;">
+<a style="color:#4d4d4d" href="https://javierarealvelez.com.ar" target="_blank">Website</a> / <a style="color:#4d4d4d" href="https://www.instagram.com/javierarealvelez/" target="_blank">IG</a> / <a style="color:#4d4d4d" href="https://www.youtube.com/playlist?list=PL9aA7doWsXWKdAg7HuW1U2ClfXp4o_PRG&si=NUM2AchqxgIlaERH" target="_blank">YouTube</a></p>
+
+</div>
 </div>
     `,
     iframe: `
-    <!--iframe width="100%" height="310" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1087965925&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/sterlac-records" title="strlac records" target="_blank" style="color: #cccccc; text-decoration: none;" rel="noopener noreferrer">strlac records</a> · <a href="https://soundcloud.com/sterlac-records/sets/fkt-lamuertenatural" title="FKT - LAMUERTENATURAL" target="_blank" style="color: #cccccc; text-decoration: none;" rel="noopener noreferrer">FKT &#8211; LAMUERTENATURAL</a></div-->
+    <iframe style="border: 0; width: 400px; height: 671px;" src="https://bandcamp.com/EmbeddedPlayer/album=360431904/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/tracklist=true/tracks=2317314106,4264500347,2187874300,3261387398,2223432560/esig=8c3f94b42d5e8538e057dd05887d6bcd/" seamless><a href="https://strlacrecords.bandcamp.com/album/trifasica">Trifasica by Javier Areal Vélez</a></iframe>
     `,
     gallery: [
       { width: '50%', src: '/releases_images/trifasica/2.jpg' },
       { width: '50%', src: '/releases_images/trifasica/5.jpg' },
-      { width: '100%', src: '/releases_images/trifasica/1.png' },
 
       { width: '100%', src: '/releases_images/trifasica/4.png' },
       { width: '100%', src: '/releases_images/trifasica/6.JPG' },
     ],
+  },
+  {
+    release: '[STRLAC006]',
+    artits: 'V/A',
+    work: 'STRLC - vol 1',
+    cover: 'vol1.jpg',
+    year: 2022,
+    slug: 'vol-1',
+    body: `
+<p>    Primer compilado de Strlac Records.</p>
+<p>    Este no solo puede ser escuchado sino que también puede ser recorrido en su versión online en: <a href="https://vol1.strlac.xyz" target="_blank">vol1.strlac.xyz</a></p>
+
+    `,
+    iframe: `
+    <div style="text-align:center;">
+    <iframe style="border: 0; width: 472px; height: 472px;" src="https://bandcamp.com/EmbeddedPlayer/album=3716588677/size=large/bgcol=333333/linkcol=ffffff/artwork=small/transparent=true/" seamless><a href="https://strlacrecords.bandcamp.com/album/strlac-vol-i">Strlac Vol I by various artists</a></iframe></div>
+    `,
+    color: '#54b854',
+    background: 'black',
+    gallery: [{ width: '100%', src: '/releases_images/vol1.jpg' }],
   },
   {
     release: '[STRLAC005]',
