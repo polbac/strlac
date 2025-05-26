@@ -53,7 +53,7 @@
         letter-spacing: 4px;
       }
       nav .item-0 {
-        position: fixed;
+        position: absolute;
         top: 10px;
         left: 50%;
         transform: translate(-50%, 0);
@@ -488,7 +488,10 @@
   <body>
     <nav>
       <a href="<%= root_path %>" class="item-0"
-        ><img width="50" src="<%= root_path %>logo.png"
+        ><img width="50" src="<%= root_path %>logo.png" class="logo-blanco" /><img
+          width="50"
+          src="<%= root_path %>logo-naranja.png"
+          class="logo-naranja"
       /></a>
       <a href="<%= root_path %>releases" class="item-1">RELEASES</a>
       <a href="<%= root_path %>about" class="item-2">ACERCA</a>
@@ -504,5 +507,22 @@
       const PRE_PATH = '<%= root_path %>'
     </script>
     <script src="<%= root_path %>app.bundle.js?<%= timestamp %>"></script>
+    <style>
+      .logo-blanco.show,
+      .logo-naranja.show {
+        opacity: 1 !important;
+      }
+      .logo-blanco.hide,
+      .logo-naranja.hide {
+        opacity: 0 !important;
+      }
+      .logo-blanco {
+        position: absolute;
+      }
+      .logo-naranja {
+        position: absolute;
+        opacity: 0 !important;
+      }
+    </style>
   </body>
 </html>

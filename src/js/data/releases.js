@@ -1,6 +1,6 @@
 export default [
   {
-    featuring:true,
+    featuring: true,
     release: '[STRLC007]',
     artits: 'Javier Areal Vélez',
     work: 'TRIFÁSICA',
@@ -10,6 +10,7 @@ export default [
     color: '#4d4d4d',
     textColor: '#4d4d4d',
     background: '#ebebeb',
+    naranja:true,
     body: `
     <div style="text-align:left;color:#4d4d4d">
     <p>Luego de una larga trayectoria como guitarrista experimental, Javier Areal Vélez presenta <b>Trifásica</b>, <i>primer lanzamiento discográfico de su nuevo proyecto de música electrónica generativa</i>. </p>
@@ -40,16 +41,25 @@ export default [
 
 
 <div style="line-height:10px;margin-top:2rem;">       
+<p><u>Materiales de Prensa</u></p>
+<p style="line-height:10px;margin-top:2rem;">
+<a style="color:#4d4d4d" href="https://soundcloud.com/javierarealvelez/sets/trifasica/s-Caj8GMA2hdR?si=eb23064327e54deebf19d091cb2ae300&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank">Escucha anticipada de Trifásica (SoundCloud)</a></p>
+<a style="color:#4d4d4d" href="https://drive.google.com/drive/folders/1ciBR7kCFazE4fvQfTCIG6YNYt2tMpn1q" target="_blank">Arte de tapa y fotos de la edición</a></p>
+<a style="color:#4d4d4d" href="https://drive.google.com/drive/u/0/folders/1K_wVRzfQ9DOXmjJBB7nhMrFgesTvyQXS" target="_blank">Retratos del artista</a></p>
+<a style="color:#4d4d4d" href="https://www.youtube.com/playlist?list=PL9aA7doWsXWKdAg7HuW1U2ClfXp4o_PRG" target="_blank">Videos en vivo (YouTube)</a></p>
+<a style="color:#4d4d4d" href="https://drive.google.com/drive/folders/1_-z8Rvq86qbS4xtdjMN2v3N-rn1JN7Kl?usp=drive_link" target="_blank">Clips en vivo (Descarga)</a></p>
+</div>
 
+<div style="line-height:10px;margin-top:2rem;">       
 <p><u>Links</u></p>
 <p style="line-height:10px;margin-top:2rem;">
 <a style="color:#4d4d4d" href="https://javierarealvelez.com.ar" target="_blank">Website</a> / <a style="color:#4d4d4d" href="https://www.instagram.com/javierarealvelez/" target="_blank">IG</a> / <a style="color:#4d4d4d" href="https://www.youtube.com/playlist?list=PL9aA7doWsXWKdAg7HuW1U2ClfXp4o_PRG&si=NUM2AchqxgIlaERH" target="_blank">YouTube</a></p>
-
 </div>
+
 </div>
     `,
     iframe: `
-    <iframe style="border: 0; width: 400px; height: 671px;" src="https://bandcamp.com/EmbeddedPlayer/album=360431904/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/tracklist=true/tracks=2317314106,4264500347,2187874300,3261387398,2223432560/esig=8c3f94b42d5e8538e057dd05887d6bcd/" seamless><a href="https://strlacrecords.bandcamp.com/album/trifasica">Trifasica by Javier Areal Vélez</a></iframe>
+    <iframe style="border: 0; width: 550px; height: 307px;" src="https://bandcamp.com/EmbeddedPlayer/album=360431904/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" seamless><a href="https://strlacrecords.bandcamp.com/album/trifasica">Trifasica by Javier Areal Vélez</a></iframe>
     `,
     gallery: [
       { width: '50%', src: '/releases_images/trifasica/2.jpg' },

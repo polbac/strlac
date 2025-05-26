@@ -8,11 +8,11 @@ export class Release extends Base{
         const [,r] = m.url.split("/")
         
         const release = releases.find(release => release.slug === r)
-        super(
-            router,
-            'release',
-            release
-        )
+        if (release.naranja){
+            $('.logo-naranja').addClass('show')
+            $('.logo-blanco').addClass('hide')
+        } 
+        super(router, 'release', release)
         
     }
 
@@ -35,5 +35,7 @@ export class Release extends Base{
 
     destroy() {
         
+        $('.logo-naranja').addClass("hide")
+        $('.logo-blanco').addClass('show')
     }
 }
