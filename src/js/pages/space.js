@@ -39,6 +39,7 @@ export class Space  extends Base{
        
 
         TweenMax.set(".canvas-video", { opacity: 0 })
+        TweenMax.from('.home-release',1, { y:200,delay:1 })
         
         window.isInRandom = true
         
