@@ -1,5 +1,6 @@
 import { Base } from './base'
 import releases from '../data/releases'
+import { trifasica } from './trifasica'
 import $ from "jquery"
 import { TweenMax } from 'gsap/gsap-core'
 export class Release extends Base{
@@ -12,7 +13,14 @@ export class Release extends Base{
             $('.logo-naranja').addClass('show')
             $('.logo-blanco').addClass('hide')
         } 
-        super(router, 'release', release)
+
+        if(r==="trifasica"){
+            super(router, 'trifasica', release);
+            trifasica()
+        }else{
+            super(router, 'release', release)
+        }
+        
         
     }
 

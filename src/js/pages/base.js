@@ -29,7 +29,7 @@ export class Base {
     }
 
     bindLinks() {
-        $('#section a').not("[target]").on('click', (event) => {
+        $('#section a').not("[target]").not("[download]").on('click', (event) => {
             event.preventDefault()
             this.router.navigate($(event.currentTarget).attr("href"), true)
             return false

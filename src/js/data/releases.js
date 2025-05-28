@@ -12,7 +12,7 @@ export default [
     background: '#ebebeb',
     naranja:true,
     body: `
-    <div style="text-align:left;color:#4d4d4d">
+    <div style="color:#4d4d4d">
     <p>Luego de una larga trayectoria como guitarrista experimental, Javier Areal Vélez presenta <b>Trifásica</b>, <i>primer lanzamiento discográfico de su nuevo proyecto de música electrónica generativa</i>. </p>
 <p>Se trata de un set de electrónica en vivo que cuestiona los límites del loop, superponiendo <i>ritmos evolutivos independientes</i> que transponen lógicas de polirritmias latinoamericanas a paisajes <i>post-digitales</i> de <i>samples ruidosos</i>, <i>sintetizadores rotos</i> y <i>efectos abrasivos</i>.</p>
 <p>En sus conciertos, Javier opera una laptop con un <i>software pseudo-inteligente</i> que programó en <i>Max/MSP</i> y <i>Ableton Live</i>. Como un secuenciador con agencia propia, este <i>robot autónomo moldea cada sonido</i>, eligiendo samples, configurando sintetizadores, definiendo alturas, duraciones y efectos. La música surge de una tensa negociación continua entre la máquina y el humano que intenta controlarla. </p>
